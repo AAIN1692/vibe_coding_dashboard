@@ -1,9 +1,13 @@
+import { DateRangeFilter } from './components/filters/DateRangeFilter';
+import { DashboardLayout } from './components/layout/DashboardLayout';
+import { Header } from './components/layout/Header';
+import { DashboardPage } from './pages/DashboardPage';
+
 function App() {
   return (
-    <div>
-      <h1>Sales Dashboard</h1>
-      <p>Project scaffold running.</p>
-    </div>
+    <DashboardLayout header={<Header filterSlot={<DateRangeFilter />} />}>
+      <DashboardPage />
+    </DashboardLayout>
   );
 }
 
